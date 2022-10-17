@@ -3,10 +3,12 @@ import java.util.SortedMap;
 
 public class Main {
     public static void main(String[] args) {
-    //wywoływanie metod
-       //zad 1
+        //wywoływanie metod
+        
+        //zad 1
         System.out.println(getMyName());
         System.out.println(getMyAge());
+        
         //zad 2
         obliczenia(1,2);
         liczby(1);
@@ -16,12 +18,51 @@ public class Main {
         a = in.nextInt();
         b= in.nextInt();
         obliczenia(a,b);
+        
         //zad3
-        liczby()
+        liczby()  System.out.println("zad3");
+        Scanner in3 = new Scanner(System.in);
+        int d;
+        System.out.println("podaj d: ");
+        d = in3.nextInt();
+        System.out.println(parzystosc(d));
+        
+        //zad4
+        System.out.println("zad4");
+        Scanner in4 = new Scanner(System.in);
+        int c;
+        System.out.println("podaj c:");
+        c= in4.nextInt();
+        System.out.println(zad4(c));
 
+        //zad5
+        System.out.println("zad5");
+        Scanner in5 = new Scanner(System.in);
+        int e;
+        System.out.println("podaj e:");
+        e= in5.nextInt();
+        potegowanie(e);
 
+        //zad6
+        System.out.println("zad6");
+        Scanner in6 = new Scanner(System.in);
+        int f;
+        System.out.println("podaj f:");
+        f= in6.nextInt();
+        pierwiastek(f);
 
-    }
+        //zad7
+        System.out.println("zad7");
+        Scanner in7 = new Scanner(System.in);
+        int x,y,z;
+        System.out.println("podaj x y z:");
+        x= in7.nextInt();
+        y= in7.nextInt();
+        z= in7.nextInt();
+        System.out.println(trojkat(x,y,z));
+    
+}
+    
     //metody
     public static String getMyName(){
         return "Jan";
@@ -36,11 +77,24 @@ public class Main {
 
     }
 
-    public static boolean liczby(int l1){
-        if(l1%2==0)
-            System.out.println("parzysta");
-        return false;
+     public static boolean parzystosc(int d) {
+        return d % 2 == 0;
     }
+    public static boolean zad4(int c ){
+        return c % 3 == 0 && c % 5 == 0;
+    }
+    public static void potegowanie(int e) {
+        System.out.println(e + "^" + "3" + "= " + (e*e*e));
+    }
+    public static void pierwiastek(int f) {
+        System.out.println("pierwiastek z f wynosi  " + f + "= " + Math.sqrt(f));
+    }
+    public static boolean trojkat(int x, int y, int z){
+        if(x*x+y*y==z*z) return true;
+        else if(x*x+z*z==y*y) return true;
+       else return y * y + z * z == x * x;
+}
+
 
 
 
